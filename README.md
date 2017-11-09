@@ -52,5 +52,5 @@
 
 ## License
 
-[MIT]()
+[MIT](https://github.com/parnec/Labeling_tool/blob/master/LICENSE.md)
 
