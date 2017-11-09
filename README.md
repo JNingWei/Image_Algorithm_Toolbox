@@ -45,8 +45,12 @@
 3. 执行指令　python main.py，完成批量图片缩放；
 4. 缩放后的图片自动保存在 Resized 文件夹下。
 
-### Requirements
+## Requirements
 
 1. Python2.x
 2. OpenCV3.x
+
+## License
+
+[MIT]()
 
