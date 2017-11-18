@@ -2,6 +2,8 @@
 
 **Update 23-10-2017: It's a toolbox contains labeling tool and resizing tool.**
 
+MIT license. Contributions welcome.
+
 ## Introduction
 
 	Labeling_Tool        根目录
