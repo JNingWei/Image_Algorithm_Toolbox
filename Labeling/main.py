@@ -116,6 +116,8 @@ class LabelTool():
         hs = self.parent.winfo_screenheight()
         w = 1050
         h = 900
+        # w = 750
+        # h = 600
         x = (ws/2) - (w/2)
         y = (hs/2) - (h/2)
         self.parent.geometry('%dx%d+%d+%d' % (w, h, x, y))
@@ -128,7 +130,7 @@ class LabelTool():
         self.imageList = glob.glob(os.path.join(self.imageDir, '*.jpg'))
         self.imageList = sorted(self.imageList)
         if len(self.imageList) == 0:
-            print 'No .jpg images found in the specified dir!'
+            print('No .jpg images found in the specified dir!')
             return
         self.cur = 1
         self.total = len(self.imageList)
@@ -136,10 +138,10 @@ class LabelTool():
         if not os.path.exists(self.outDir):
             os.makedirs(self.outDir)
         self.loadImage()
-        print '%d images loaded from %s' %(self.total, s)
+        print('%d images loaded from %s' %(self.total, s))
 
     def refreshBBox(self):
-        for idx in xrange(len(self.bboxIdList)):
+        for idx in range(len(self.bboxIdList)):
             self.mainPanel.delete(self.bboxIdList[idx])
         self.listbox.delete(0, len(self.bboxList))
         self.bboxIdList = []
@@ -177,7 +179,7 @@ class LabelTool():
             self.bboxList.sort()
             for bbox in self.bboxList:
                 f.write(' '.join(map(str, bbox)) + '\n')
-        print 'Image No. %d saved' %(self.cur)
+        print('Image No. %d saved' %(self.cur))
 
     def leftClick(self, event):
         if self.STATE['click'] == 0:
@@ -229,7 +231,7 @@ class LabelTool():
 
     def clearBBox(self):
         if tk.messagebox.askyesno(title='Warning', message='Are you sure to clear all ?'):
-            for idx in xrange(len(self.bboxIdList)):
+            for idx in range(len(self.bboxIdList)):
                 self.mainPanel.delete(self.bboxIdList[idx])
             self.listbox.delete(0, len(self.bboxList))
             self.bboxIdList = []
