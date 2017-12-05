@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2bf1f22-401f-46db-a729-fa3079d7d8c1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Labeling/Images/2/001.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Images/2/002.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Images/2/003.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Images/2/004.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Images/2/005.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Images/3/001.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Images/3/002.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Images/3/003.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Images/3/004.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Images/3/005.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Labels/1/001.txt" afterPath="$PROJECT_DIR$/Labeling/Labels/1/001.txt" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Labels/1/002.txt" afterPath="$PROJECT_DIR$/Labeling/Labels/1/002.txt" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Labels/1/003.txt" afterPath="$PROJECT_DIR$/Labeling/Labels/1/003.txt" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Labels/1/004.txt" afterPath="$PROJECT_DIR$/Labeling/Labels/1/004.txt" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Labels/1/005.txt" afterPath="$PROJECT_DIR$/Labeling/Labels/1/005.txt" />
-      <change beforePath="$PROJECT_DIR$/Labeling/Labels/2/001.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Labeling/main.py" afterPath="$PROJECT_DIR$/Labeling/main.py" />
-      <change beforePath="$PROJECT_DIR$/Resizing/Resized/001.jpg" afterPath="$PROJECT_DIR$/Resizing/Resized/001.jpg" />
-      <change beforePath="$PROJECT_DIR$/Resizing/Resized/002.jpg" afterPath="$PROJECT_DIR$/Resizing/Resized/002.jpg" />
-      <change beforePath="$PROJECT_DIR$/Resizing/Resized/003.jpg" afterPath="$PROJECT_DIR$/Resizing/Resized/003.jpg" />
-      <change beforePath="$PROJECT_DIR$/Resizing/Resized/004.jpg" afterPath="$PROJECT_DIR$/Resizing/Resized/004.jpg" />
-      <change beforePath="$PROJECT_DIR$/Resizing/Resized/005.jpg" afterPath="$PROJECT_DIR$/Resizing/Resized/005.jpg" />
-      <change beforePath="$PROJECT_DIR$/Resizing/main.py" afterPath="$PROJECT_DIR$/Resizing/main.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,24 +13,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Labeling/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2337">
-              <caret line="128" column="68" lean-forward="false" selection-start-line="128" selection-start-column="68" selection-end-line="128" selection-end-column="68" />
+            <state relative-caret-position="230">
+              <caret line="116" column="16" lean-forward="false" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
               <folding>
                 <element signature="e#15#46#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Resizing/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -109,18 +77,6 @@
               <item name="Labeling_Tool" type="462c0819:PsiDirectoryNode" />
               <item name="Resizing" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Labeling_Tool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Labeling_Tool" type="462c0819:PsiDirectoryNode" />
-              <item name="Resizing" type="462c0819:PsiDirectoryNode" />
-              <item name="Origin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Labeling_Tool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Labeling_Tool" type="462c0819:PsiDirectoryNode" />
-              <item name="Resizing" type="462c0819:PsiDirectoryNode" />
-              <item name="Resized" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -151,7 +107,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -198,8 +154,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +188,7 @@
     <frame x="65" y="-4" width="1855" height="1084" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.115720525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.115720525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -333,21 +289,21 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Labeling/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2337">
-          <caret line="128" column="68" lean-forward="false" selection-start-line="128" selection-start-column="68" selection-end-line="128" selection-end-column="68" />
-          <folding>
-            <element signature="e#15#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resizing/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Labeling/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="116" column="16" lean-forward="false" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
+          <folding>
+            <element signature="e#15#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
