@@ -74,6 +74,7 @@ Specify the coordinates use single left-click, every two clicks to determine a d
 <br>
 
 Automatically create messages of marked boxes:
+
 ![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/6.png)
 
 <br>
