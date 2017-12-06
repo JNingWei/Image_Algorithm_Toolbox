@@ -4,9 +4,9 @@
 -----------------
 
 
-| **`Linux CPU`** | **`Linux GPU`** | **`Mac OS CPU`** | **`Windows CPU`** | **`Windows GPU`** | **`Android`** |
-|-----------------|---------------------|------------------|-------------------|---------------|-------------------|
-| ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) |
+| **`Linux CPU`** | **`Linux GPU`** | **`Mac OS CPU`** | **`Windows CPU`** | **`Windows GPU`** | 
+|-----------------|---------------------|------------------|-------------------|---------------|
+| ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) |
 
 
 **Update 23-10-2017: It's a toolbox contains labeling tool and resizing tool.**
