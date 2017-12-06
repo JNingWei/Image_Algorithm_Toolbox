@@ -6,7 +6,7 @@
 
 | **`Linux CPU`** | **`Linux GPU`** | **`Mac OS CPU`** | **`Windows CPU`** | **`Windows GPU`** | **`Android`** |
 |-----------------|---------------------|------------------|-------------------|---------------|-------------------|
-| [![Build Status](https://ci.tensorflow.org/buildStatus/icon?job=tensorflow-master-linux-gpu)](https://ci.tensorflow.org/job/tensorflow-master-linux-gpu) | [![Build Status](https://ci.tensorflow.org/buildStatus/icon?job=tensorflow-master-linux-gpu)](https://ci.tensorflow.org/job/tensorflow-master-linux-gpu) | [![Build Status](https://ci.tensorflow.org/buildStatus/icon?job=tensorflow-master-linux-gpu)](https://ci.tensorflow.org/job/tensorflow-master-linux-gpu) | [![Build Status](https://ci.tensorflow.org/buildStatus/icon?job=tensorflow-master-mac)](https://ci.tensorflow.org/job/tensorflow-master-mac) | [![Build Status](https://ci.tensorflow.org/buildStatus/icon?job=tensorflow-master-mac)](https://ci.tensorflow.org/job/tensorflow-master-mac) | [![Build Status](https://ci.tensorflow.org/buildStatus/icon?job=tensorflow-master-android)](https://ci.tensorflow.org/job/tensorflow-master-android) |
+| ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) |
 
 
 **Update 23-10-2017: It's a toolbox contains labeling tool and resizing tool.**
