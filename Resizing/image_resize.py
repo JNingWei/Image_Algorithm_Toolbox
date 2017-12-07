@@ -12,7 +12,8 @@ dst = './Resized'    # dir for resized pics
 new_size = (1024, 1024)   # new size
 
 import os
-origin_pics = [os.path.join(src, name) for name in os.listdir(src) if name.endswith('jpg') or name.endswith('png')]
+origin_pics = [os.path.join(src, name) for name in os.listdir(src) if name.endswith('jpg') or name.endswith('JPG')
+               or name.endswith('png') or name.endswith('PNG')]
 
 origin_pics.sort()
 

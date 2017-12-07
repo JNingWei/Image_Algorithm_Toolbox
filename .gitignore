@@ -1,17 +1,26 @@
+
 # IDE comes with
 .idea/
 
-# Labeling/ large files
-Labeling/Images
-Labeling/Labels
 
-# Resizing/ large files
+# test
+test/
+
+
+# large files in Bbox_Labeling/
+Bbox_Labeling/Images
+Bbox_Labeling/Labels
+
+
+# large files in Label_Formating/
+Label_Formating/Origin
+Label_Formating/Formated
+
+
+# large files in Resizing/
 Resizing/Origin
 Resizing/Resized
 
-# Formating/ large files
-Formating/Origin
-Formating/Formated
 
 """
   ┌───┐   ┌───┬───┬───┬───┐ ┌───┬───┬───┬───┐ ┌───┬───┬───┬───┐ ┌───┬───┬───┐
