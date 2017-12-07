@@ -1,4 +1,13 @@
-# Labeling_Tool　![Travis](https://img.shields.io/travis/rust-lang/rust.svg) ![Language](https://img.shields.io/badge/language-Python-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) ![AD](https://img.shields.io/badge/东半球最好的-图像标记工具-pink.svg)
+# Labeling_Tool　 ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) ![AD](https://img.shields.io/badge/东半球最好的-图像标记工具-ff69b4.svg)
+
+
+-----------------
+
+
+| **`Linux CPU`** | **`Linux GPU`** | **`Mac OS CPU`** | **`Windows CPU`** | **`Windows GPU`** | 
+|-----------------|---------------------|------------------|-------------------|---------------|
+| ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust.svg) |
+
 
 **Update 23-10-2017: It's a toolbox contains labeling tool and resizing tool.**
 
@@ -32,14 +41,6 @@ MIT license. Contributions welcome.
 
 ## Usage
 
-### 图片标注工具
-
-1. ```cd ./Labeling```
-2. 将待标注图片拷至 *Images* 文件夹下；
-3. 执行指令　```python main.py```，打开工具窗口；
-4. 开始标注；
-5. 已标注图片会在 *Labels* 文件夹下生成同名文件。
-
 ### 图片缩放工具
 
 1. ```cd ./Resizing```
@@ -47,9 +48,54 @@ MIT license. Contributions welcome.
 3. 执行指令　```python main.py```，完成批量图片缩放；
 4. 缩放后的图片自动保存在 *Resized* 文件夹下。
 
+### 图片标注工具
+
+1. ```cd ./Labeling```
+2. 将待标注图片拷至 *Images* 文件夹下；
+3. 执行指令　```python main.py```，打开工具窗口；
+4. 开始标注（具体见 **Demo**）；
+5. 已标注图片会在 *Labels* 文件夹下生成同名文件。
+
+## Demo
+Open the labeling tool:
+![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/0.png)
+
+<br>
+
+Input the name of sub folder:
+![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/2.png)
+
+<br>
+
+Automatically load corresponding Image:
+![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/3.png)
+
+<br>
+
+Automatically create document of the same name:
+![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/5.png)
+
+<br>
+
+Specify the coordinates use single left-click, every two clicks to determine a diagonal box. Right click cancel.:
+![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/4.png)
+
+<br>
+
+Automatically create messages of marked boxes:
+
+![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/6.png)
+
+<br>
+
+Please enjoy the labeling process (≧▽≦)y :
+![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/7.png)
+<br>
+
+
 ## Requirements
 
-1. Python2.x
+1. Python3.x
 2. OpenCV3.x
 
 ## License
