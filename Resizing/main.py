@@ -4,7 +4,7 @@
 Labeling_Tool
 Resize pic to defined size.
 
-Written by JNing Wei
+__author__ = 'JNingWei'
 """
 
 src = './Origin'    # dir for origin pics

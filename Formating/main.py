@@ -4,7 +4,7 @@
 Labeling_Tool
 Format xlsx to txt.
 
-Written by JNing Wei
+__author__ = 'JNingWei'
 """
 
 src = './Origin'    # dir for origin pics

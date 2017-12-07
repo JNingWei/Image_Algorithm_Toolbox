@@ -4,7 +4,7 @@
 Labeling_Tool
 Visiable tool for labeling bbox.
 
-Written by JNing Wei
+__author__ = 'JNingWei'
 """
 
 from __future__ import division
