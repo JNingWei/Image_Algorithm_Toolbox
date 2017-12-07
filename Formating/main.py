@@ -1,5 +1,12 @@
 # coding=utf-8
 
+"""
+Labeling_Tool
+Format xlsx to txt.
+
+Written by JNing Wei
+"""
+
 src = './Origin'    # dir for origin pics
 dst = './Formated'    # dir for formated pics
 

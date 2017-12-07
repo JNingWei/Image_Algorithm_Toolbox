@@ -1,4 +1,12 @@
 # coding=utf-8
+
+"""
+Labeling_Tool
+Visiable tool for labeling bbox.
+
+Written by JNing Wei
+"""
+
 from __future__ import division
 import tkinter as tk
 import tkinter.messagebox

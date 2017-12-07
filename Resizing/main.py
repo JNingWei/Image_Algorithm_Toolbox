@@ -1,5 +1,12 @@
 # coding=utf-8
 
+"""
+Labeling_Tool
+Resize pic to defined size.
+
+Written by JNing Wei
+"""
+
 src = './Origin'    # dir for origin pics
 dst = './Resized'    # dir for resized pics
 new_size = (1024, 1024)   # new size
