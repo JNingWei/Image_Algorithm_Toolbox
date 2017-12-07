@@ -8,18 +8,18 @@ test/
 
 
 # large files in Bbox_Labeling/
-Bbox_Labeling/Images
-Bbox_Labeling/Labels
+Bbox_Labeling/Images/
+Bbox_Labeling/Labels/
 
 
 # large files in Label_Formating/
-Label_Formating/Origin
-Label_Formating/Formated
+Label_Formating/Origin/
+Label_Formating/Formated/
 
 
 # large files in Resizing/
-Resizing/Origin
-Resizing/Resized
+Resizing/Origin/
+Resizing/Resized/
 
 
 """
