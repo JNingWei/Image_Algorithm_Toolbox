@@ -28,7 +28,11 @@ os.makedirs(dst)
 
 # main operation
 import cv2
-for i, origin_pic in enumerate(origin_pics):
+# for i, origin_pic in enumerate(origin_pics):
+#     img = cv2.imread(origin_pic)
+#     resized_pic = cv2.resize(img, new_size)
+#     cv2.imwrite('{}/{:>03d}.jpg'.format(dst, i+1), resized_pic)
+for origin_pic in origin_pics:
     img = cv2.imread(origin_pic)
     resized_pic = cv2.resize(img, new_size)
-    cv2.imwrite('{}/{:>03d}.jpg'.format(dst, i+1), resized_pic)
+    cv2.imwrite(origin_pic.replace(src, dst), resized_pic)

@@ -19,15 +19,15 @@ def dst_check(dst):
         pass
     os.makedirs(dst)
 
-def resize_location(x, scale, min, max):
+def resize_location(value, scale, min, max):
     # 类型检查
-    x = int(x)
+    value = int(value)
     # 尺寸缩放
-    x = int(round(float(x) * scale))
+    value = int(round(float(value) * scale))
     # 边界溢出检查
-    x = min if x < min else x
-    x = max if x > max else x
-    return x
+    value = min if value < min else value
+    value = max if value > max else value
+    return value
 
 
 def get_path_lists(src):
@@ -62,12 +62,12 @@ def resize_label(src_label_path, dst_label_path, origin_size, new_size, idx):
     w_file.writelines(lines[0])
     for mess in messages:
         if mess.split():
-            y1, x1, y2, x2 = mess.split()
-            y1_new = resize_location(y1, scale_h, min=0, max=new_h-1)
+            x1, y1, x2, y2 = mess.split()
             x1_new = resize_location(x1, scale_w, min=0, max=new_w-1)
-            y2_new = resize_location(y2, scale_h, min=0, max=new_h-1)
+            y1_new = resize_location(y1, scale_h, min=0, max=new_h-1)
             x2_new = resize_location(x2, scale_w, min=0, max=new_w-1)
-            new_mess = "{0} {1} {2} {3}\n".format(y1_new, x1_new, y2_new, x2_new)
+            y2_new = resize_location(y2, scale_h, min=0, max=new_h-1)
+            new_mess = "{0} {1} {2} {3}\n".format(x1_new, y1_new, x2_new, y2_new)
             w_file.writelines(new_mess)
     r_file.close()
     w_file.close()
