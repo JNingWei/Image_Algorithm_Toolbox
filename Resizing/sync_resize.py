@@ -52,7 +52,7 @@ def resize_image(src_image_path, dst_image_path, origin_size, new_size, idx):
     cv2.imwrite(dst_image_path, dst_image)
 
 def resize_label(src_label_path, dst_label_path, origin_size, new_size, idx):
-    origin_h, origin_w = origin_size
+    origin_w, origin_h = origin_size
     new_h, new_w = new_size
     scale_h, scale_w = new_h / origin_h, new_w / origin_w
     r_file = open(src_label_path, "r")
