@@ -35,9 +35,9 @@ for xlsx_file in xlsx_list:
     sheet = r_file.get_sheet_by_name("Sheet1")
     assert sheet.max_row - 1 == len(sheet["M"][1:])
     w_file.writelines("{}\n".format(str(sheet.max_row - 1)))
-    for idx, (xmin, ymin, xmax, ymax) in enumerate(zip(sheet["M"][1:], sheet["N"][1:], sheet["O"][1:], sheet["P"][1:])):
+    for (xmin, ymin, xmax, ymax) in zip(sheet["M"][1:], sheet["N"][1:], sheet["O"][1:], sheet["P"][1:]):
         # print("{:>3d}: ({:>4d},{:>4d}) ({:>4d},{:>4d})".format(idx, xmin.value, ymin.value, xmax.value, ymax.value))
-        line = "{0} {1} {2} {3} {4}\n".format(idx, ymin.value, xmin.value, ymax.value, xmax.value)
+        line = "{0} {1} {2} {3}\n".format(ymin.value, xmin.value, ymax.value, xmax.value)
         w_file.writelines(line)
     w_file.close()
 
