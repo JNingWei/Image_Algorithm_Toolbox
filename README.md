@@ -98,6 +98,23 @@ Please enjoy the labeling process (≧▽≦)y :
 1. Python3.x
 2. OpenCV3.x
 
+## Possible problems
+
+You may meet AttributeError for different python version.
+
+Replace the head lines
+```python
+import tkinter as tk
+import tkinter.messagebox
+```
+with:
+```python
+import Tkinter as tk
+from Tkinter import *
+import tkMessageBox
+```
+And Error will be fix.
+
 ## License
 
 [MIT](https://github.com/parnec/Labeling_tool/blob/master/LICENSE.md)
