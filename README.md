@@ -114,7 +114,7 @@ import Tkinter as tk
 from Tkinter import *
 import tkMessageBox
 ```
-Then Error will be fix.
+Then error will be fixed.
 
 ## License
 
