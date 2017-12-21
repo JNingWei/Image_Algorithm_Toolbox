@@ -102,18 +102,19 @@ Please enjoy the labeling process (≧▽≦)y :
 
 You may meet AttributeError for different python version.
 
-Replace the head lines
+Replace the head lines:
 ```python
 import tkinter as tk
 import tkinter.messagebox
 ```
+
 with:
 ```python
 import Tkinter as tk
 from Tkinter import *
 import tkMessageBox
 ```
-And Error will be fix.
+Then Error will be fix.
 
 ## License
 
