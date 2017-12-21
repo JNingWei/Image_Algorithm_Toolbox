@@ -114,6 +114,9 @@ import Tkinter as tk
 from Tkinter import *
 import tkMessageBox
 ```
+
+And replace ```tk.messagebox.askyesno```(appear twice in line 241、255) with ```tkMessageBox.askyesno```.
+
 Then error will be fixed.
 
 ## License
