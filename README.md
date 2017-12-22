@@ -24,7 +24,8 @@ MIT license. Contributions welcome.
 	     |         |
 	     |         +-- src/         	   pics to be distributed (need build by yourself)  存放待分发的图片集(需自己新建)
 	     |         |
-	     |         +-- dst/                    pics be distributed (automatically build by program)  存放已分发的图片集(程序自动新建)	     |
+	     |         +-- dst/                    pics be distributed (automatically build by program)  存放已分发的图片集(程序自动新建)	     
+	     |
 	     |
 	     +-- Enhancing_Tool/      image enhancing tool  图片数据增强工具
 	     |         |
