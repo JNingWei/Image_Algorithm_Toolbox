@@ -15,29 +15,54 @@ MIT license. Contributions welcome.
 
 ## Introduction
 
-	Labeling_Tool        根目录
+    Image_Algorithm_Toolbox/      root dir  根目录
 	     |
 	     |
-	     +-- README.html      说明文档
+	     +-- Enhancing_Tool/      data enhancing tool  图片数据增强工具
+	     |         |
+	     |         +-- sync_enhancing.py       main program  主程序
+	     |         |
+	     |         +-- src/         	   pics to be marked (need build by yourself)  存放待标注图片(需自己新建)
+	     |         |
+	     |         +-- dst/                    pics be marked (automatically build by program)  存放已标注同名文件(程序自动新建)
 	     |
 	     |
-	     +-- Labeling         图片标注工具
-	     |    |
-	     |    +-- main.py         主程序
-	     |    |
-	     |    +-- Images/         存放待标注图片(需自己新建)
-	     |    |
-	     |    +-- Labels/         存放已标注同名文件(程序自动新建)
+	     +-- Formatting_Tool/     format conversion tool  格式转换工具
+	     |         |
+	     |         +-- format_conversion.py    main program  主程序
+	     |         |
+	     |         +-- src/         	   pics to be marked (need build by yourself)  存放待标注图片(需自己新建)
+	     |         |
+	     |         +-- dst/                    pics be marked (automatically build by program)  存放已标注同名文件(程序自动新建)
 	     |
 	     |
-	     +-- Resizing         图片缩放工具
-		  |
-		  +-- main.py         主程序
-		  |
-		  +-- Origin/         存放待缩放图片(需自己新建)
-		  |
-		  +-- Resized/        存放已缩放图片(程序自动新建)
-
+	     +-- Labeling_Tool/       labeling tool  图片标记工具
+	     |         |
+	     |         +-- labeling.py             main program  主程序
+	     |         |
+	     |         +-- src/         	   pics to be marked (need build by yourself)  存放待标注图片(需自己新建)
+	     |         |
+	     |         +-- dst/                    pics be marked (automatically build by program)  存放已标注同名文件(程序自动新建)
+	     |
+	     |
+	     +-- Resizing_Tool/       resizing tool  图片缩放工具
+	     |         |
+	     |         +-- pic_resizing.py         main program 1  主程序1
+	     |         |
+	     |         +-- sync_resizing.py        main program 2  主程序2
+	     |         |
+	     |         +-- src/         	   pics to be marked (need build by yourself)  存放待标注图片(需自己新建)
+	     |         |
+	     |         +-- dst/                    pics be marked (automatically build by program)  存放已标注同名文件(程序自动新建)	     
+	     |
+	     |
+	     +-- README.md            manual of project  说明手册
+	     |
+	     |
+	     +-- LICENSE.md           license of project  许可证
+	     |
+	     |
+	     +-- requirements.txt     environment required for this program  环境要求
 
 ## Usage
 
