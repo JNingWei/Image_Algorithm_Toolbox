@@ -9,7 +9,7 @@
 | ![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg) |
 
 
-**Update 23-10-2017: It's a toolbox contains labeling tool and resizing tool.**
+**Update 23-10-2017: It's an image algorithm toolbox.**
 
 MIT license. Contributions welcome.
 
@@ -25,18 +25,18 @@ MIT license. Contributions welcome.
 	     |    |
 	     |    +-- main.py         主程序
 	     |    |
-	     |    +-- Images          存放待标注图片
+	     |    +-- Images/         存放待标注图片(需自己新建)
 	     |    |
-	     |    +-- Labels          存放已标注同名文件
+	     |    +-- Labels/         存放已标注同名文件(程序自动新建)
 	     |
 	     |
 	     +-- Resizing         图片缩放工具
 		  |
 		  +-- main.py         主程序
 		  |
-		  +-- Origin          存放待缩放图片
+		  +-- Origin/         存放待缩放图片(需自己新建)
 		  |
-		  +-- Resized         存放已缩放图片
+		  +-- Resized/        存放已缩放图片(程序自动新建)
 
 
 ## Usage
