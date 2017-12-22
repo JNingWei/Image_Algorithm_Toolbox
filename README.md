@@ -69,31 +69,30 @@ MIT license. Contributions welcome.
 ### data enhancing tool  图片数据增强工具
 
 1. ```cd Enhancing_Tool/```；
-2. Build *src/* folder and copy dataset into it；
-3. Run　```sync_enhancing.py```；
-4. Processed images automatically be saved into  *dst* folder.
+2. Build ```src/``` folder and copy dataset into it；
+3. Run ```sync_enhancing.py```；
+4. Processed images automatically be saved into ```dst/``` folder.
 
 ### format conversion tool  格式转换工具
 
-1. ```cd ./Resizing```
-2. 将待缩放图片拷至 *Origin* 文件夹下；
-3. 执行指令　```python main.py```，完成批量图片缩放；
-4. 缩放后的图片自动保存在 *Resized* 文件夹下。
+1. ```cd Formatting_Tool/```；
+2. Build ```src/``` folder and copy dataset into it；
+3. Run ```format_conversion.py```；
+4. Processed images automatically be saved into ```dst/``` folder.
 
 ### labeling tool  图片标记工具
 
-1. ```cd ./Resizing```
-2. 将待缩放图片拷至 *Origin* 文件夹下；
-3. 执行指令　```python main.py```，完成批量图片缩放；
-4. 缩放后的图片自动保存在 *Resized* 文件夹下。
+1. ```cd Labeling_Tool/```；
+2. Build ```src/``` folder and copy dataset into it；
+3. Run ```labeling.py```；
+4. Processed images automatically be saved into ```dst/``` folder.
 
 ### resizing tool  图片缩放工具
 
-1. ```cd ./Labeling```
-2. 将待标注图片拷至 *Images* 文件夹下；
-3. 执行指令　```python main.py```，打开工具窗口；
-4. 开始标注（具体见 **Demo**）；
-5. 已标注图片会在 *Labels* 文件夹下生成同名文件。
+1. ```cd Resizing_Tool/```；
+2. Build ```src/``` folder and copy dataset into it；
+3. Run ```pic_resizing.py``` or ```sync_resizing.py```；
+4. Processed images automatically be saved into ```dst/``` folder.
 
 ## Demo
 Open the labeling tool:
