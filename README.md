@@ -1,4 +1,4 @@
-# Image_Algorithm_Toolbox　 ![Language](https://img.shields.io/badge/language-Python3-orange.svg)  ![AD](https://img.shields.io/badge/东半球最好的-图像算法工具箱-ff69b4.svg)  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) 
+# Image_Algorithm_Toolbox　 ![Language](https://img.shields.io/badge/language-Python3-orange.svg) ![AD](https://img.shields.io/badge/东半球最好的-图像算法工具箱-ff69b4.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md) 
 
 
 -----------------
