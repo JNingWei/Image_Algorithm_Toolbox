@@ -1,8 +1,8 @@
 # coding=utf-8
 
 """
-Labeling_Tool
-Resize pic to defined size.
+Image_Algorithm_Toolbox
+Synchronously resize pics and label files to defined size.
 
 __author__ = 'JNingWei'
 """
@@ -84,7 +84,7 @@ def main(src, dst, new_size):
 
 
 if __name__ == "__main__":
-    SRC = './Origin'    # dir for origin pics
-    DST = './Resized'    # dir for resized pics
+    SRC = './src'    # dir for origin pics
+    DST = './dst'    # dir for resized pics
     NEW_SIZE = (1024, 1024)   # new size
     main(SRC, DST, NEW_SIZE)

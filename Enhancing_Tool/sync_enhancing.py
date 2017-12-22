@@ -1,7 +1,7 @@
 # coding=utf-8
 
 """
-Labeling_Tool
+Image_Algorithm_Toolbox
 Resize pic to defined size.
 
 __author__ = 'JNingWei'
@@ -122,9 +122,9 @@ def main(src, dst, h_flip, v_flip, hv_flip):
 
 
 if __name__ == "__main__":
-    SRC = './Origin'    # dir for origin pics
-    DST = './Enhanced'    # dir for resized pics
-    h_flip = True   # horizontal
-    v_flip = True   # vertical
+    SRC = './src'    # dir for origin pics
+    DST = './dst'    # dir for resized pics
+    h_flip = True    # horizontal
+    v_flip = True    # vertical
     hv_flip = True   # both horizontal and vertical
     main(SRC, DST, h_flip, v_flip, hv_flip)

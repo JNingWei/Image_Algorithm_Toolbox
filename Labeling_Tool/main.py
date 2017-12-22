@@ -1,7 +1,7 @@
 # coding=utf-8
 
 """
-Labeling_Tool
+Image_Algorithm_Toolbox
 Visiable tool for labeling bbox.
 
 __author__ = 'JNingWei'
@@ -23,7 +23,7 @@ class LabelTool():
     def __init__(self, master):
         # set up the main frame
         self.parent = master
-        self.parent.title("207LabelTool")
+        self.parent.title("Labeling Tool")
         self.frame = tk.Frame(self.parent)
         self.frame.pack(fill=tk.BOTH, expand=1)
         self.parent.resizable(width = tk.FALSE, height = tk.FALSE)
@@ -134,7 +134,7 @@ class LabelTool():
     def loadDir(self):
         s = self.entry.get()
         self.category = int(s)
-        self.imageDir = os.path.join('./Images', str(self.category))
+        self.imageDir = os.path.join('./src', str(self.category))
         self.imageList = glob.glob(os.path.join(self.imageDir, '*.jpg'))
         self.imageList = sorted(self.imageList)
         if len(self.imageList) == 0:
@@ -142,7 +142,7 @@ class LabelTool():
             return
         self.cur = 1
         self.total = len(self.imageList)
-        self.outDir = os.path.join('./Labels', str(self.category))
+        self.outDir = os.path.join('./dst', str(self.category))
         if not os.path.exists(self.outDir):
             os.makedirs(self.outDir)
         self.loadImage()

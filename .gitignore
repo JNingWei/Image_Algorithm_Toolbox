@@ -3,32 +3,32 @@
 .idea/
 
 
-# test
+# test files in test/
 test/
 
 
-# large files in Bbox_Labeling/
-Bbox_Labeling/Images/
-Bbox_Labeling/Labels/
+# large files in Labeling_Tool/
+Labeling_Tool/src/
+Labeling_Tool/dst/
 
 
-# large files in Label_Formating/
-Label_Formating/Origin/
-Label_Formating/Formated/
+# large files in Formatting_Tool/
+Formatting_Tool/src/
+Formatting_Tool/dst/
 
 
-# large files in Resizing/
-Resizing/Origin/
-Resizing/Resized/
+# large files in Resizing_Tool/
+Resizing_Tool/src/
+Resizing_Tool/dst/
 
 
-# large files in Enhancing/
-Enhancing/Origin/
-Enhancing/Enhanced/
+# large files in Enhancing_Tool/
+Enhancing_Tool/src/
+Enhancing_Tool/dst/
 
 
-# large files in Origin_Dataset/
-Origin_Dataset/
+# large files in Origin/
+Origin/
 
 
 """

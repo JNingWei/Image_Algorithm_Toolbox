@@ -1,14 +1,14 @@
 # coding=utf-8
 
 """
-Labeling_Tool
+Image_Algorithm_Toolbox
 Resize pic to defined size.
 
 __author__ = 'JNingWei'
 """
 
-src = './Origin'    # dir for origin pics
-dst = './Resized'    # dir for resized pics
+src = './src'    # dir for origin pics
+dst = './dst'    # dir for resized pics
 new_size = (1024, 1024)   # new size
 
 import os

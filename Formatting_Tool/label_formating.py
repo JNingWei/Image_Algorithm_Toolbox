@@ -1,15 +1,14 @@
 # coding=utf-8
 
 """
-Labeling_Tool
-Format xlsx to txt.
+Image_Algorithm_Toolbox
+Format .xlsx to .txt
 
 __author__ = 'JNingWei'
 """
 
-src = "./Origin"    # dir for origin pics
-dst = "./Formated"    # dir for formated pics
-
+src = "./src"    # dir for origin pics
+dst = "./dst"    # dir for formated pics
 origin_suffix = "xlsx"
 new_suffix = "txt"
 
