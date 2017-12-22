@@ -18,13 +18,21 @@ MIT license. Contributions welcome.
     Image_Algorithm_Toolbox/      root dir  根目录
 	     |
 	     |
-	     +-- Enhancing_Tool/      data enhancing tool  图片数据增强工具
+	     +-- Distributing_Tool/   image distributing tool  图片数据分发工具
+	     |         |
+	     |         +-- distributing.py         main program  主程序
+	     |         |
+	     |         +-- src/         	   pics to be distributed (need build by yourself)  存放待分发的图片集(需自己新建)
+	     |         |
+	     |         +-- dst/                    pics be distributed (automatically build by program)  存放已分发的图片集(程序自动新建)	     |
+	     |
+	     +-- Enhancing_Tool/      image enhancing tool  图片数据增强工具
 	     |         |
 	     |         +-- sync_enhancing.py       main program  主程序
 	     |         |
-	     |         +-- src/         	   pics to be enhanced (need build by yourself)  存放待增强的数据集(需自己新建)
+	     |         +-- src/         	   pics to be enhanced (need build by yourself)  存放待增强的图片集(需自己新建)
 	     |         |
-	     |         +-- dst/                    pics be enhanced (automatically build by program)  存放已增强的数据集(程序自动新建)
+	     |         +-- dst/                    pics be enhanced (automatically build by program)  存放已增强的图片集(程序自动新建)
 	     |
 	     |
 	     +-- Formatting_Tool/     format conversion tool  格式转换工具
@@ -66,7 +74,15 @@ MIT license. Contributions welcome.
 
 ## Usage
 
-### data enhancing tool  图片数据增强工具
+
+### image distributing tool  图片数据分发工具
+
+1. ```cd Distributing_Tool/```；
+2. Build ```src/``` folder and copy dataset into it；
+3. Run ```distributing.py```；
+4. Processed images automatically be saved into ```dst/``` folder.
+
+### image enhancing tool  图片数据增强工具
 
 1. ```cd Enhancing_Tool/```；
 2. Build ```src/``` folder and copy dataset into it；
