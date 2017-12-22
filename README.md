@@ -107,7 +107,7 @@ May meet ```AttributeError``` by python2.
 import tkinter as tk
 import tkinter.messagebox
 ```
-$emsp;with:
+&emsp;with:
 ```python
 import Tkinter as tk
 from Tkinter import *
