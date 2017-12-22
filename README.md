@@ -51,9 +51,9 @@ MIT license. Contributions welcome.
 	     |         |
 	     |         +-- sync_resizing.py        main program 2  主程序2(同步缩放图片和标记文件)
 	     |         |
-	     |         +-- src/         	   pics to be marked (need build by yourself)  存放待缩放的数据集(需自己新建)
+	     |         +-- src/         	   pics to be resized (need build by yourself)  存放待缩放的数据集(需自己新建)
 	     |         |
-	     |         +-- dst/                    pics be marked (automatically build by program)  存放同名的已缩放(程序自动新建)	    数据集 
+	     |         +-- dst/                    pics be resized (automatically build by program)  存放同名的已缩放(程序自动新建)	    数据集 
 	     |
 	     |
 	     +-- README.md            manual of project  说明手册
@@ -68,12 +68,10 @@ MIT license. Contributions welcome.
 
 ### data enhancing tool  图片数据增强工具
 
-1. ```cd Enhancing_Tool/```
-2. Build *src/* dir
-3. Copy 
-2. 将待缩放图片拷至 *Origin* 文件夹下；
-3. 执行指令　```python main.py```，完成批量图片缩放；
-4. 缩放后的图片自动保存在 *Resized* 文件夹下。
+1. ```cd Enhancing_Tool/```；
+2. Build *src/* folder and copy dataset into it；
+3. Run　```sync_enhancing.py```；
+4. Processed images automatically be saved into  *dst* folder.
 
 ### format conversion tool  格式转换工具
 
