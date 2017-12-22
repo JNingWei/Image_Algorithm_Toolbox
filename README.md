@@ -139,7 +139,7 @@ Please enjoy the labeling process (≧▽≦)y :
 
 ## Possible problems
 
-May meet ```AttributeError``` by python2.
+```AttributeError``` may met when using python2.
 
 1. Replace the head lines:
 ```python
