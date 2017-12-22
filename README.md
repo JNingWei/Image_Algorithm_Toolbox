@@ -22,38 +22,38 @@ MIT license. Contributions welcome.
 	     |         |
 	     |         +-- sync_enhancing.py       main program  主程序
 	     |         |
-	     |         +-- src/         	   pics to be marked (need build by yourself)  存放待标注图片(需自己新建)
+	     |         +-- src/         	   pics to be enhanced (need build by yourself)  存放待增强的数据集(需自己新建)
 	     |         |
-	     |         +-- dst/                    pics be marked (automatically build by program)  存放已标注同名文件(程序自动新建)
+	     |         +-- dst/                    pics be enhanced (automatically build by program)  存放已增强的数据集(程序自动新建)
 	     |
 	     |
 	     +-- Formatting_Tool/     format conversion tool  格式转换工具
 	     |         |
 	     |         +-- format_conversion.py    main program  主程序
 	     |         |
-	     |         +-- src/         	   pics to be marked (need build by yourself)  存放待标注图片(需自己新建)
+	     |         +-- src/         	   pics to be formatted (need build by yourself)  存放待格式转换的文件(需自己新建)
 	     |         |
-	     |         +-- dst/                    pics be marked (automatically build by program)  存放已标注同名文件(程序自动新建)
+	     |         +-- dst/                    pics be formatted (automatically build by program)  存放同名的已转换文件(程序自动新建)
 	     |
 	     |
 	     +-- Labeling_Tool/       labeling tool  图片标记工具
 	     |         |
 	     |         +-- labeling.py             main program  主程序
 	     |         |
-	     |         +-- src/         	   pics to be marked (need build by yourself)  存放待标注图片(需自己新建)
+	     |         +-- src/         	   pics to be marked (need build by yourself)  存放待标注的图片(需自己新建)
 	     |         |
-	     |         +-- dst/                    pics be marked (automatically build by program)  存放已标注同名文件(程序自动新建)
+	     |         +-- dst/                    pics be marked (automatically build by program)  存放同名的已标注文件(程序自动新建)
 	     |
 	     |
 	     +-- Resizing_Tool/       resizing tool  图片缩放工具
 	     |         |
-	     |         +-- pic_resizing.py         main program 1  主程序1
+	     |         +-- pic_resizing.py         main program 1  主程序1(只缩放图片)
+	     |         |
+	     |         +-- sync_resizing.py        main program 2  主程序2(同步缩放图片和标记文件)
 	     |         |
-	     |         +-- sync_resizing.py        main program 2  主程序2
+	     |         +-- src/         	   pics to be marked (need build by yourself)  存放待缩放的数据集(需自己新建)
 	     |         |
-	     |         +-- src/         	   pics to be marked (need build by yourself)  存放待标注图片(需自己新建)
-	     |         |
-	     |         +-- dst/                    pics be marked (automatically build by program)  存放已标注同名文件(程序自动新建)	     
+	     |         +-- dst/                    pics be marked (automatically build by program)  存放同名的已缩放(程序自动新建)	    数据集 
 	     |
 	     |
 	     +-- README.md            manual of project  说明手册
@@ -66,14 +66,30 @@ MIT license. Contributions welcome.
 
 ## Usage
 
-### 图片缩放工具
+### data enhancing tool  图片数据增强工具
+
+1. ```cd Enhancing_Tool/```
+2. Build *src/* dir
+3. Copy 
+2. 将待缩放图片拷至 *Origin* 文件夹下；
+3. 执行指令　```python main.py```，完成批量图片缩放；
+4. 缩放后的图片自动保存在 *Resized* 文件夹下。
+
+### format conversion tool  格式转换工具
 
 1. ```cd ./Resizing```
 2. 将待缩放图片拷至 *Origin* 文件夹下；
 3. 执行指令　```python main.py```，完成批量图片缩放；
 4. 缩放后的图片自动保存在 *Resized* 文件夹下。
 
-### 图片标注工具
+### labeling tool  图片标记工具
+
+1. ```cd ./Resizing```
+2. 将待缩放图片拷至 *Origin* 文件夹下；
+3. 执行指令　```python main.py```，完成批量图片缩放；
+4. 缩放后的图片自动保存在 *Resized* 文件夹下。
+
+### resizing tool  图片缩放工具
 
 1. ```cd ./Labeling```
 2. 将待标注图片拷至 *Images* 文件夹下；
