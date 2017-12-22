@@ -94,7 +94,8 @@ MIT license. Contributions welcome.
 3. Run ```pic_resizing.py``` or ```sync_resizing.py```；
 4. Processed images automatically be saved into ```dst/``` folder.
 
-## Demo
+## Tutorial of labeling tool
+
 Open the labeling tool:
 ![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/0.png)
 
