@@ -17,7 +17,7 @@ import glob
 # colors for the bboxes
 COLORS = ['green', 'cyan', 'blue', 'purple', 'red', 'orange', 'yellow', 'brown', 'pink', 'magenta']
 # image sizes for the examples
-SIZE = 500, 500
+SIZE = 800, 800
 
 class LabelTool():
     def __init__(self, master):

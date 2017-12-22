@@ -36,8 +36,8 @@ def get_path_lists(src):
     assert len(src_image_paths)
     src_image_paths.sort()
     src_label_paths = [path.replace(os.path.splitext(path)[1], ".txt") for path in src_image_paths]
-    dst_image_paths = [path.replace("Origin", "Resized").replace(os.path.splitext(path)[1], os.path.splitext(path)[1].lower()) for path in src_image_paths]
-    dst_label_paths = [path.replace("Origin", "Resized").replace(os.path.splitext(path)[1], ".txt") for path in src_image_paths]
+    dst_image_paths = [path.replace("src", "dst").replace(os.path.splitext(path)[1], os.path.splitext(path)[1].lower()) for path in src_image_paths]
+    dst_label_paths = [path.replace("src", "dst").replace(os.path.splitext(path)[1], ".txt") for path in src_image_paths]
     return src_image_paths, src_label_paths, dst_image_paths, dst_label_paths
 
 
