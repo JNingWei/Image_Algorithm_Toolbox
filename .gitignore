@@ -7,6 +7,11 @@
 test/
 
 
+# large files in Distributing_Tool/
+Distributing_Tool/src/
+Distributing_Tool/dst/
+
+
 # large files in Labeling_Tool/
 Labeling_Tool/src/
 Labeling_Tool/dst/

@@ -123,8 +123,117 @@ def main(src, dst, h_flip, v_flip, hv_flip):
 
 if __name__ == "__main__":
     SRC = './src'    # dir for origin pics
-    DST = './dst'    # dir for generated pics
-    h_flip = True    # horizontal flip
-    v_flip = True    # vertical flip
-    hv_flip = True   # both horizontal and vertical flip
+    DST = './dst'    # dir for resized pics
+    h_flip = True    # horizontal
+    v_flip = True    # vertical
+    hv_flip = True   # both horizontal and vertical
     main(SRC, DST, h_flip, v_flip, hv_flip)
+
+
+import os
+import shutil
+import logging
+
+from lib import global_parameter
+
+total_folder = global_parameter.total_folder
+distribute_folder = global_parameter.distribute_folder
+
+per_person_per_day_num = global_parameter.per_person_per_day_num
+person_names = global_parameter.person_names
+
+person_num = len(person_names)
+if not os.path.isdir(total_folder):
+    logging.ERROR('Total_folder does not exist .')
+    exit(1)
+try:
+    shutil.rmtree(distribute_folder)
+except OSError:
+    pass
+os.mkdir(distribute_folder)
+
+person_folders = []
+for person_name in person_names:
+    person_folders.append(os.path.join(distribute_folder, person_name))
+for person_folder in person_folders:
+    try:
+        os.mkdir(person_folder)
+    except OSError:
+        pass
+# #############
+#     txt_path = os.path.join(person_folder, 'num.txt')
+#     f = open(txt_path, 'w')
+#     f.write('Haha\n')
+#     f.write('0')
+#     f.close()
+# #############
+result_image_paths = [os.path.join(total_folder, name) for name in os.listdir(total_folder)
+                      if os.path.isfile(os.path.join(total_folder, name))]
+result_image_paths.sort()
+per_box = []
+pic_index = 0
+person_index = -1
+for result_image_path in result_image_paths:
+    per_box.append(result_image_path)
+    pic_index += 1
+    if pic_index >= 50:
+        person_index += 1
+
+        # #############
+        # num_txt_path_specify = os.path.join(person_folders[person_index], 'num.txt')
+        # f = open(num_txt_path_specify, 'r')
+        # a = f.readlines().strip('\n'')
+        # print a
+        # box_num = int(f.readlines()[1]) + 1
+        # f.close()
+        # print a
+        # print 'box_num = {}'.format(box_num)
+        # f = open(num_txt_path_specify, 'w+')
+        # a[1] = str(box_num)
+        # print a
+        # f.write(str(a))
+        # f.close()
+        # ############
+        # print 'box_num = {}'.format(box_num)
+        #
+        # #############
+
+        box_num = len(os.listdir(str(person_folders[person_index]))) + 1
+        sub_box_path_specify = os.path.join(person_folders[person_index], str(box_num))
+        if os.path.exists(sub_box_path_specify):
+            # ########
+            # print 'sub_box_path_specify = {}'.format(sub_box_path_specify)
+            # ########
+            logging.ERROR('{} already exists .'.format(sub_box_path_specify))
+            exit(1)
+        os.mkdir(sub_box_path_specify)
+        for per_pic in per_box:
+            shutil.copy(per_pic, sub_box_path_specify)
+
+        if person_index >= person_num-1:
+            person_index = -1
+        per_box = []
+        pic_index = 0
+print '\n\nDistribution has been done !'
+
+
+
+
+# list.py
+naive_folder = '../video'
+avi_path_list = '../generated_file/avi_path.txt'
+avi_path_list_2 = '../generated_file/avi_path_2.txt'
+
+# extract_frame.py
+extract_folder = '../generated_file/extract_folder'
+
+# filter.py
+limited_num = 5
+
+# distribute
+total_folder = '../generated_file/extract_folder'
+distribute_folder = '../generated_file/distribute_folder'
+
+per_person_per_day_num = 50
+person_names = ['Li.Jun', 'Lin.Jian', 'Wang.Qianyu', 'Cao.Wenqiang']
+
