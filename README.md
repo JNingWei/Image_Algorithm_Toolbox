@@ -102,7 +102,7 @@ Please enjoy the labeling process (≧▽≦)y :
 
 May meet ```AttributeError``` by python2.
 
-Replace the head lines:
+1. Replace the head lines:
 ```python
 import tkinter as tk
 import tkinter.messagebox
@@ -115,7 +115,7 @@ from Tkinter import *
 import tkMessageBox
 ```
 
-And replace ```tk.messagebox.askyesno```(appear twice in line 241、255) with ```tkMessageBox.askyesno```.
+2. Replace ```tk.messagebox.askyesno```(appear twice in line 241、255) with ```tkMessageBox.askyesno```.
 
 Then error will be fixed.
 
