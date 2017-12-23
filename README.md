@@ -15,8 +15,8 @@ MIT license. Contributions welcome.
 
 **Note :**
 
-The tools are independent of each other, can be used alone.<br>
-各工具之间互相独立，可单独使用。
+Each sub-tool independent of each other, can be used alone.<br>
+各子工具之间互相独立，可单独使用。
 
 ## Overview
 
