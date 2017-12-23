@@ -13,6 +13,11 @@
 
 MIT license. Contributions welcome.
 
+**Note :**
+
+The tools are independent of each other, can be used alone.<br>
+各工具之间互相独立，可单独使用。
+
 ## Overview
 
     Image_Algorithm_Toolbox/      root dir  根目录
