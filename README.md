@@ -9,7 +9,7 @@
 | ![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg) | ![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg) |
 
 
-**Update 23-10-2017: It's an image algorithm toolbox.**
+**Update 23-10-2017: It's an image algorithm toolbox entirely written by myself.**
 
 MIT license. Contributions welcome.
 
