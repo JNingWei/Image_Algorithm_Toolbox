@@ -118,40 +118,26 @@ Each sub-tool independent of each other, can be used alone.<br>
 
 ## Tutorial of labeling tool
 
-Open the labeling tool:
+Open the labeling tool:<br>
 ![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/0.png)
 
-<br>
-
-Input the name of sub folder:
+Input the name of sub folder:<br>
 ![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/2.png)
 
-<br>
-
-Automatically load corresponding Image:
+Automatically load corresponding Image:<br>
 ![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/3.png)
 
-<br>
-
-Automatically create document of the same name:
+Automatically create document of the same name:<br>
 ![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/5.png)
 
-<br>
-
-Specify the coordinates use single left-click, every two clicks to determine a diagonal box. Right click cancel.:
+Specify the coordinates use single left-click, every two clicks to determine a diagonal box. Right click cancel.:<br>
 ![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/4.png)
 
-<br>
-
-Automatically create messages of marked boxes:
-
+Automatically create messages of marked boxes:<br>
 ![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/6.png)
 
-<br>
-
-Please enjoy the labeling process (≧▽≦)y :
+Please enjoy the labeling process (≧▽≦)y :<br>
 ![](https://github.com/parnec/Labeling_Tool/blob/master/.demo/7.png)
-<br>
 
 
 ## Requirements
