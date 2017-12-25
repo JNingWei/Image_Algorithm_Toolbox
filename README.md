@@ -67,7 +67,7 @@ Each sub-tool independent of each other, can be used alone.<br>
 	     |         |
 	     |         +-- src/         	   pics to be resized (need build by yourself)  存放待缩放的数据集(需自己新建)
 	     |         |
-	     |         +-- dst/                    pics be resized (automatically build by program)  存放同名的已缩放(程序自动新建)	    数据集 
+	     |         +-- dst/                    pics be resized (automatically build by program)  存放同名的已缩放数据集(程序自动新建)	     
 	     |
 	     |
 	     +-- README.md            manual of project  说明手册
