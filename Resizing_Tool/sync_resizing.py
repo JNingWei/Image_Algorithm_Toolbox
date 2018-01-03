@@ -19,6 +19,7 @@ def dst_check(dst):
         pass
     os.makedirs(dst)
 
+
 def resize_location(value, scale, min, max):
     # 类型检查
     value = int(value)

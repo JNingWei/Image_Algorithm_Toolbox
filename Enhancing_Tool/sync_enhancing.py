@@ -20,6 +20,15 @@ def dst_check(dst):
     os.makedirs(dst)
 
 
+def boundary_control(value, min, max):
+    # 类型检查
+    value = int(value)
+    # 边界溢出检查
+    value = min if value < min else value
+    value = max if value > max else value
+    return value
+
+
 def get_path_lists(src):
     check_suffix = lambda x : True if os.path.splitext(x)[1] in [".jpg", ".JPG", ".png", ".PNG"] else False
     src_image_paths = [os.path.join(src, name) for name in os.listdir(src) if check_suffix(name)]
@@ -74,7 +83,11 @@ def enhance_label(src_label_path, dst_label_path, h_flip, v_flip, h_v_flip, h, w
         h_file.writelines(lines[0])
         for mess in messages:
             if mess.split():
-                x1, y1, x2, y2 = map(int, mess.split())
+                x1, y1, x2, y2 = list(map(int, mess.split()))
+                # boundary control
+                x1, x2 = boundary_control(x1, 0, w), boundary_control(x2, 0, w)
+                y1, y2 = boundary_control(y1, 0, h), boundary_control(y2, 0, h)
+                # flip
                 x1_new = w - x1
                 y1_new = y1
                 x2_new = w - x2
@@ -88,7 +101,11 @@ def enhance_label(src_label_path, dst_label_path, h_flip, v_flip, h_v_flip, h, w
         v_file.writelines(lines[0])
         for mess in messages:
             if mess.split():
-                x1, y1, x2, y2 = map(int, mess.split())
+                x1, y1, x2, y2 = list(map(int, mess.split()))
+                # boundary control
+                x1, x2 = boundary_control(x1, 0, w), boundary_control(x2, 0, w)
+                y1, y2 = boundary_control(y1, 0, h), boundary_control(y2, 0, h)
+                # flip
                 x1_new = x1
                 y1_new = h - y1
                 x2_new = x2
@@ -102,7 +119,11 @@ def enhance_label(src_label_path, dst_label_path, h_flip, v_flip, h_v_flip, h, w
         hv_file.writelines(lines[0])
         for mess in messages:
             if mess.split():
-                x1, y1, x2, y2 = map(int, mess.split())
+                x1, y1, x2, y2 = list(map(int, mess.split()))
+                # boundary control
+                x1, x2 = boundary_control(x1, 0, w), boundary_control(x2, 0, w)
+                y1, y2 = boundary_control(y1, 0, h), boundary_control(y2, 0, h)
+                # flip
                 x1_new = w - x1
                 y1_new = h - y1
                 x2_new = w - x2
