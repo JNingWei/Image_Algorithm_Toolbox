@@ -126,8 +126,8 @@ class LabelTool():
         h = 900
         # w = 750
         # h = 600
-        x = (ws/2) - (w/2)
-        y = (hs/2) - (h/2)
+        x = (ws//2) - (w//2)
+        y = (hs//2) - (h//2)
         self.parent.geometry('%dx%d+%d+%d' % (w, h, x, y))
 
     # 加载目录
@@ -135,7 +135,8 @@ class LabelTool():
         s = self.entry.get()
         self.category = int(s)
         self.imageDir = os.path.join('./src', str(self.category))
-        self.imageList = glob.glob(os.path.join(self.imageDir, '*.jpg'))
+        self.imageList = [os.path.join(self.imageDir, pic) for pic in os.listdir(self.imageDir)
+                          if os.path.splitext(pic)[1] in [".jpg", ".JPG", ".png", ".PNG"]]
         self.imageList = sorted(self.imageList)
         if len(self.imageList) == 0:
             print('No .jpg images found in the specified dir!')
