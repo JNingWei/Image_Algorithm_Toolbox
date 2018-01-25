@@ -61,7 +61,7 @@ class LabelTool():
         self.label.grid(row = 0, column = 0, sticky = tk.E)
         self.entry = tk.Entry(self.frame)
         self.entry.grid(row = 0, column = 1, sticky = tk.W+tk.E)
-        self.ldBtn = tk.Button(self.frame, text = "Load", command = self.loadDir)
+        self.ldBtn = tk.Button(self.frame, text = "Load", command = self.loadDir, border = 2)
         self.ldBtn.grid(row = 0, column = 2, sticky = tk.W+tk.E)
         # main panel for labeling
         self.mainPanel = tk.Canvas(self.frame, cursor='tcross')
@@ -75,18 +75,18 @@ class LabelTool():
         # showing bbox info & delete bbox
         self.lb1 = tk.Label(self.frame, text = 'Bounding boxes:')
         self.lb1.grid(row = 1, column = 2, sticky = tk.W)
-        self.listbox = tk.Listbox(self.frame, width = 24, height = 60)
+        self.listbox = tk.Listbox(self.frame, width = 30, height = 60)
         self.listbox.grid(row = 2, column = 2, sticky = tk.N)
-        self.btnDel = tk.Button(self.frame, text = 'Delete', command = self.delBBox)
+        self.btnDel = tk.Button(self.frame, text = 'Delete', command = self.delBBox, border = 2)
         self.btnDel.grid(row = 3, column = 2, sticky = tk.W+tk.E+tk.N)
-        self.btnClear = tk.Button(self.frame, text = 'ClearAll', command = self.clearBBox)
+        self.btnClear = tk.Button(self.frame, text = 'ClearAll', command = self.clearBBox, border = 2)
         self.btnClear.grid(row = 4, column = 2, sticky = tk.W+tk.E+tk.N)
         # control panel for image navigation
         self.ctrPanel = tk.Frame(self.frame)
         self.ctrPanel.grid(row = 5, column = 1, columnspan = 2, sticky = tk.W+tk.E)
-        self.prevBtn = tk.Button(self.ctrPanel, text='<< Prev', width = 10, command = self.prevImage)
+        self.prevBtn = tk.Button(self.ctrPanel, text='<< Prev', width = 10, command = self.prevImage, border = 5)
         self.prevBtn.pack(side = tk.LEFT, padx = 5, pady = 3)
-        self.nextBtn = tk.Button(self.ctrPanel, text='Next >>', width = 10, command = self.nextImage)
+        self.nextBtn = tk.Button(self.ctrPanel, text='Next >>', width = 10, command = self.nextImage, border = 5)
         self.nextBtn.pack(side = tk.LEFT, padx = 5, pady = 3)
         self.progLabel = tk.Label(self.ctrPanel, text = "")
         self.progLabel.pack(side = tk.LEFT, padx = 5)
@@ -94,8 +94,10 @@ class LabelTool():
         self.tmpLabel.pack(side = tk.LEFT, padx = 5)
         self.idxEntry = tk.Entry(self.ctrPanel, width = 5)
         self.idxEntry.pack(side = tk.LEFT)
-        self.goBtn = tk.Button(self.ctrPanel, text = 'Go', command = self.gotoImage)
+        self.goBtn = tk.Button(self.ctrPanel, text = 'Go', command = self.gotoImage, border = 2)
         self.goBtn.pack(side = tk.LEFT)
+        self.exitBtn = tk.Button(self.ctrPanel, text='Exit !', width = 10, command = self.exit, border = 5)
+        self.exitBtn.pack(side = tk.RIGHT, padx = 5, pady = 3)
         self.egPanel = tk.Frame(self.frame, border = 10)
         self.egPanel.grid(row = 1, column = 0, rowspan = 5, sticky = tk.N+tk.E)
         self.tmpLabel2 = tk.Label(self.egPanel, text = "Pic:")
@@ -307,6 +309,11 @@ class LabelTool():
             self.saveImage()
             self.cur = idx
             self.loadImage()
+
+    def exit(self, event = None):
+        self.saveImage()
+        exit(0)
+
 
 if __name__ == '__main__':
     root = tk.Tk()
