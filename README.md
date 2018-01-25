@@ -147,7 +147,7 @@ Please enjoy the labeling process (≧▽≦)y :<br>
 
 ## Possible problems
 
-In **labeling tool**,```AttributeError``` may met when using python2.
+In **labeling tool**, ```AttributeError``` may met when using python2.
 
 1. Replace the head lines:
 ```python
@@ -164,8 +164,8 @@ import tkMessageBox
 2. Replace ```tk.messagebox.askyesno```(appear twice in *line 241、255*) with ```tkMessageBox.askyesno```.
 
 Then error will be fixed.
-
 <br>
+
 In **labeling tool**, since the window image I designed is auto-scaled, the original mark's coordinate position may shift slightly if you repeatedly access the image. But for high-definition pictures, this tiny offset is often negligible.
 
 
