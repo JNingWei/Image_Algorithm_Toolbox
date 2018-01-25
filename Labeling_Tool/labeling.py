@@ -20,6 +20,9 @@ COLORS = ['green', 'cyan', 'blue', 'purple', 'red', 'orange', 'yellow', 'brown',
 # scaling ratio
 SCALING_RATIO = 0
 
+# real_image_size
+REAL_IMG_W, REAL_IMG_H = 0, 0
+
 class LabelTool():
     def __init__(self, master):
         # set up the main frame
@@ -122,10 +125,11 @@ class LabelTool():
         panel_w = int(panel_h * aspect_ratio)
         global SCALING_RATIO
         SCALING_RATIO = panel_h / h
+        global REAL_IMG_W, REAL_IMG_H
+        REAL_IMG_W, REAL_IMG_H = w, h
         if panel_w > screen_w - 150:
             assert "Sorry, the loaded picture is too wide ! Please resize it first."
         return panel_w, panel_h
-
 
     def menu(self):
         menubar = tk.Menu(self.parent)
@@ -209,8 +213,20 @@ class LabelTool():
             recovering = lambda x: int(x / SCALING_RATIO)
             for bbox in self.bboxList:
                 bbox = list(map(recovering, bbox))
+                bbox = self.check_border(bbox)
                 f.write(' '.join(map(str, bbox)) + '\n')
         print('Image No. %d saved' %(self.cur))
+
+    def check_border(self, bbox):
+        x1, y1, x2, y2 = bbox
+        low_check = lambda k, low_limit: k if k > low_limit else low_limit
+        high_check = lambda k, high_limit: k if k < high_limit else high_limit
+        global REAL_IMG_W, REAL_IMG_H
+        x1 = high_check(low_check(x1, 1), REAL_IMG_W-1)
+        y1 = high_check(low_check(y1, 1), REAL_IMG_H-1)
+        x2 = high_check(low_check(x2, 1), REAL_IMG_W-1)
+        y2 = high_check(low_check(y2, 1), REAL_IMG_H-1)
+        return x1, y1, x2, y2
 
     def leftClick(self, event):
         if self.STATE['click'] == 0:
@@ -225,6 +241,7 @@ class LabelTool():
 
             recovering = lambda x: int(x / SCALING_RATIO)
             x1, y1, x2, y2 = list(map(recovering, [x1, y1, x2, y2]))
+            x1, y1, x2, y2 = self.check_border([x1, y1, x2, y2])
 
             self.listbox.insert(tk.END, '(%d, %d) -> (%d, %d)' %(x1, y1, x2, y2))
             self.listbox.itemconfig(len(self.bboxIdList) - 1, fg = COLORS[(len(self.bboxIdList) - 1) % len(COLORS)])
