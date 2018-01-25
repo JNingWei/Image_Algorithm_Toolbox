@@ -12,12 +12,13 @@ import tkinter as tk
 import tkinter.messagebox
 from PIL import Image, ImageTk
 import os
-import glob
+import cv2
 
 # colors for the bboxes
 COLORS = ['green', 'cyan', 'blue', 'purple', 'red', 'orange', 'yellow', 'brown', 'pink', 'magenta']
-# image sizes for the examples
-SIZE = 800, 800
+
+# scaling ratio
+SCALING_RATIO = 0
 
 class LabelTool():
     def __init__(self, master):
@@ -110,6 +111,20 @@ class LabelTool():
         self.center_window()
         self.menu()
 
+
+    def scaling_panel(self, image_path):
+        screen_w, screen_h = self.parent.winfo_screenwidth(), self.parent.winfo_screenheight()
+        h, w, _ = cv2.imread(image_path).shape
+        aspect_ratio = w / h
+        panel_h = int(screen_h - 250)
+        panel_w = int(panel_h * aspect_ratio)
+        global SCALING_RATIO
+        SCALING_RATIO = panel_h / h
+        if panel_w > screen_w - 150:
+            assert "Sorry, the loaded picture is too wide ! Please resize it first."
+        return panel_w, panel_h
+
+
     def menu(self):
         menubar = tk.Menu(self.parent)
         filemenu = tk.Menu(menubar, tearoff=0)
@@ -120,20 +135,15 @@ class LabelTool():
         self.parent.config(menu=menubar)
 
     def center_window(self):
-        ws = self.parent.winfo_screenwidth()
-        hs = self.parent.winfo_screenheight()
-        w = 1050
-        h = 900
-        # w = 750
-        # h = 600
-        x = (ws//2) - (w//2)
-        y = (hs//2) - (h//2)
+        ws, hs = self.parent.winfo_screenwidth(), self.parent.winfo_screenheight()
+        w, h = ws - 150, hs - 150
+        x = round((ws//2) - (w//2))
+        y = round((hs//2) - (h//2))
         self.parent.geometry('%dx%d+%d+%d' % (w, h, x, y))
 
     # 加载目录
     def loadDir(self):
-        s = self.entry.get()
-        self.category = int(s)
+        self.category = self.entry.get()
         self.imageDir = os.path.join('./src', str(self.category))
         self.imageList = [os.path.join(self.imageDir, pic) for pic in os.listdir(self.imageDir)
                           if os.path.splitext(pic)[1] in [".jpg", ".JPG", ".png", ".PNG"]]
@@ -147,7 +157,7 @@ class LabelTool():
         if not os.path.exists(self.outDir):
             os.makedirs(self.outDir)
         self.loadImage()
-        print('%d images loaded from %s' %(self.total, s))
+        print('%d images loaded from %s' %(self.total, self.category))
 
     def refreshBBox(self):
         for idx in range(len(self.bboxIdList)):
@@ -157,14 +167,16 @@ class LabelTool():
         self.bboxList = []
 
     def loadImage(self):
-        imagepath = self.imageList[self.cur - 1]
-        self.img = Image.open(imagepath)
+        image_path = self.imageList[self.cur - 1]
+        self.img_1 = Image.open(image_path)
+        panel_w, panel_h = self.scaling_panel(image_path)
+        self.img = self.img_1.resize((panel_w, panel_h),Image.ANTIALIAS)
         self.tkimg = ImageTk.PhotoImage(self.img)
-        self.mainPanel.config(width = max(self.tkimg.width(), 400), height = max(self.tkimg.height(), 400))
+        self.mainPanel.config(width = self.tkimg.width(), height = self.tkimg.height())
         self.mainPanel.create_image(0, 0, image = self.tkimg, anchor=tk.NW)
         self.progLabel.config(text = "%04d/%04d" %(self.cur, self.total))
         self.refreshBBox()
-        self.imagename = os.path.split(imagepath)[-1].split('.')[0]
+        self.imagename = os.path.split(image_path)[-1].split('.')[0]
         labelname = self.imagename + '.txt'
         self.labelfilename = os.path.join(self.outDir, labelname)
         if os.path.exists(self.labelfilename):
@@ -172,21 +184,29 @@ class LabelTool():
                 for (i, line) in enumerate(f):
                     if i == 0:
                         continue
-                    tmp = [int(t) for t in line.split()]
-                    self.bboxList.append(tuple(tmp))
-                    tmpId = self.mainPanel.create_rectangle(tmp[0], tmp[1],
-                                                            tmp[2], tmp[3],
+                    tmp_true = [int(t) for t in line.split()]
+                    global SCALING_RATIO
+                    scaling = lambda x: int(x * SCALING_RATIO)
+                    tmp_scaled = list(map(scaling, tmp_true))
+                    self.bboxList.append(tuple(tmp_scaled))
+                    tmpId = self.mainPanel.create_rectangle(tmp_scaled[0], tmp_scaled[1],
+                                                            tmp_scaled[2], tmp_scaled[3],
                                                             width = 3,
                                                             outline = COLORS[(len(self.bboxList)-1) % len(COLORS)])
                     self.bboxIdList.append(tmpId)
-                    self.listbox.insert(tk.E, '({:>3d}, {:>3d}) -> ({:>3d}, {:>3d})'.format(tmp[0], tmp[1], tmp[2], tmp[3]))
+
+                    self.listbox.insert(tk.E, '({:>3d}, {:>3d}) -> ({:>3d}, {:>3d})'
+                                        .format(tmp_true[0], tmp_true[1], tmp_true[2], tmp_true[3]))
                     self.listbox.itemconfig(len(self.bboxIdList) - 1, fg = COLORS[(len(self.bboxIdList) - 1) % len(COLORS)])
 
     def saveImage(self):
         with open(self.labelfilename, 'w') as f:
-            f.write('%d\n' %len(self.bboxList))
+            f.write('{}\n'.format(len(self.bboxList)))
             self.bboxList.sort()
+            global SCALING_RATIO
+            recovering = lambda x: int(x / SCALING_RATIO)
             for bbox in self.bboxList:
+                bbox = list(map(recovering, bbox))
                 f.write(' '.join(map(str, bbox)) + '\n')
         print('Image No. %d saved' %(self.cur))
 
@@ -200,6 +220,10 @@ class LabelTool():
             self.bboxIdList.append(self.bboxId)
             self.bboxIdList.sort()
             self.bboxId = None
+
+            recovering = lambda x: int(x / SCALING_RATIO)
+            x1, y1, x2, y2 = list(map(recovering, [x1, y1, x2, y2]))
+
             self.listbox.insert(tk.END, '(%d, %d) -> (%d, %d)' %(x1, y1, x2, y2))
             self.listbox.itemconfig(len(self.bboxIdList) - 1, fg = COLORS[(len(self.bboxIdList) - 1) % len(COLORS)])
         self.STATE['click'] = 1 - self.STATE['click']
@@ -288,3 +312,4 @@ if __name__ == '__main__':
     root = tk.Tk()
     tool = LabelTool(root)
     root.mainloop()
+
